@@ -2,7 +2,7 @@
     <div>
         <b-card header="TodoList" header-tag="header">
             <b-list-group>
-                <TodoItem v-for="item in list" :todo="item" :key="item.id"/>
+                <TodoItem v-on:complete-todo="completeTodo" v-for="item in list" :todo="item" :key="item.id"/>
             </b-list-group>
             <template v-slot:footer>
                 <input type="text" v-model="todo" v-on:keyup.enter="addNewTodo()"/>
