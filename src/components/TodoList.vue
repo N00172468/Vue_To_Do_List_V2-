@@ -30,7 +30,22 @@ export default {
         };
     },
     methods: {
+        addNewTodo() {
+            // Validate Todo:
+            if (!this.todo) {
+                alert("Enter Todo");
+                return;
+            }
 
+            // Get max. ID in list and add 1 to it:
+            const newId = Math.max.apply(null, this.list.map(t => t.id)) + 1;
+
+            // Add Todo to list with new ID, text in input field and done: false:
+            this.list.push({ id: newId, text: this.todo, done: false });
+
+            // Reset Todo input to empty string:
+            this.todo = "";
+        },
     }
 };
 </script>
