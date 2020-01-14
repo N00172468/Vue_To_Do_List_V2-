@@ -46,6 +46,10 @@ export default {
             // Reset Todo input to empty string:
             this.todo = "";
         },
+        completeTodo(todo) {
+            const todoIndex = this.list.indexOf(todo);
+            this.list[todoIndex].done = true;
+        }
     }
 };
 </script>
