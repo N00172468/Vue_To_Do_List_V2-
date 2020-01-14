@@ -1,9 +1,13 @@
 <template>
     <div>
         <b-card header="TodoList" header-tag="header">
-        <template v-slot:footer>
-            <b-button class="float-right" variant="primary">Add</b-button>
-        </template>
+            <b-list-group>
+                <TodoItem v-for="item in list" :todo="item" :key="item.id"/>
+            </b-list-group>
+            <template v-slot:footer>
+                <b-button class="float-right" variant="primary">Add</b-button>
+            </template>
+        </b-card>
     </div>
 </template>
 
