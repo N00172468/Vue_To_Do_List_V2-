@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <TodoList></TodoList>
-    <p>OR</p>
-    <TodoList/>
+    <!-- <TodoList></TodoList> OR <TodoList/> -->
+    <b-container>
+      <b-row>
+        <b-col><TodoList/></b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
