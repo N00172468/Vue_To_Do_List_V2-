@@ -22,9 +22,13 @@ export default {
     data() {
         return {
             list: [
-                { id: 1, text: "Clean thy gaff", done: true },
-                { id: 2, text: "Feed thy peasanth", done: false },
-                { id: 3, text: "Create thy To Do Appeth", done: false }
+                { id: 1, text: "Clean the gaff", done: true },
+                { id: 2, text: "Feed people", done: false },
+                { id: 3, text: "Cure world hunger", done: false },
+                { id: 4, text: "Get good", done: false },
+                { id: 5, text: "Yes", done: false },
+                { id: 6, text: "Do groceries", done: false },
+                { id: 7, text: "Don't forget to sleep!", done: false }
             ],
             todo: ""
         };
