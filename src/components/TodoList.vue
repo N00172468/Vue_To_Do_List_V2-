@@ -25,7 +25,8 @@ export default {
                 { id: 1, text: "Clean thy gaff", done: true },
                 { id: 2, text: "Feed thy peasanth", done: false },
                 { id: 3, text: "Create thy To Do Appeth", done: false }
-            ]
+            ],
+            todo: ""
         };
     },
     methods: {
