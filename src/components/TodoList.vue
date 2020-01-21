@@ -2,7 +2,7 @@
     <div>
         <b-card header="TodoList" header-tag="header">
             <b-list-group>
-                <TodoItem v-on:complete-todo="completeTodo" v-for="item in list" :todo="item" :key="item.id"/>
+                <TodoItem v-on:complete-todo="completeTodo" v-for="item in list" :todo="item" :key="item.id" v-on:delete-todo="deleteTodo"/>
             </b-list-group>
             <template v-slot:footer>
                 <input type="text" v-model="todo" v-on:keyup.enter="addNewTodo()"/>
@@ -53,6 +53,10 @@ export default {
         completeTodo(todo) {
             const todoIndex = this.list.indexOf(todo);
             this.list[todoIndex].done = true;
+        },
+        deleteTodo(todo) {
+            const todoIndex = this.list.indexOf(todo);
+            this.list.splice(todoIndex, 1);
         }
     }
 };
